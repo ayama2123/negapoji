@@ -11,7 +11,7 @@ def reframing(negative_word):
   \n\nネガティブな性格: {text_input}\n\n
   また、このリフレーミングを踏まえた自己PRを作成し、長所と短所も含めてください。
   """
-    response = openai.chat.completions.create(
+  response = openai.chat.completions.create(
       model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": f"自己PRを生成するGPTです。"},
