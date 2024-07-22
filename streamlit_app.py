@@ -8,7 +8,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 def reframing(negative_word):
   prompt=f"""
   以下のネガティブな性格についてリフレーミングしてポジティブな解釈を教えてください。
-  \n\nネガティブな性格: {text_input}\n\n
+  \n\nネガティブな性格: {negative_word}\n\n
   また、このリフレーミングを踏まえた自己PRを作成し、長所と短所も含めてください。
   """
   response = openai.chat.completions.create(
