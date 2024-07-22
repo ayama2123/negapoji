@@ -20,8 +20,8 @@ def reframing(negative_word):
     )
   return response.choices[0].message.content
 
-st.title("ネガポジ変換！自己PR作成マシン")
-st.write("自分の性格を入力すると自己PRが作られます！")
+st.title("ネガポジ変換！自己PR作成ロボ")
+st.write("自分の性格を入力すると自己PRが作成されます！")
 
 negative_word = st.text_input("自分の性格を入力してください:")
 
@@ -33,6 +33,6 @@ if st.button("リフレーミング開始"):
           st.write(positive_reframe)
           
           # 長所と短所を自己PRとして出力
-          st.subheader("自己PR")
+          #st.subheader("自己PR")
           #"st.write(f"長所: {positive_reframe.split('and provide')[0].strip()}")
           #st.write(f"短所: {negative_word}")
