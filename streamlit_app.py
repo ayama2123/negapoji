@@ -18,7 +18,7 @@ def reframing(negative_word):
             {"role": "user", "content": prompt}
         ]
     )
-    return response.choices[0].message.content
+  return response.choices[0].message.content
 
 st.title("ネガポジ変換！自己PR作成マシン")
 st.write("自分の性格を入力すると自己PRが作られます！")
