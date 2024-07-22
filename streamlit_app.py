@@ -25,13 +25,14 @@ st.write("自分の性格を入力すると自己PRが作られます！")
 
 negative_word = st.text_input("自分の性格を入力してください:")
 
-if negative_word:
-    with st.spinner("リフレーミング中..."):
-        positive_reframe = reframing(negative_word)
-        st.subheader("こんな解釈もできますね！")
-        st.write(positive_reframe)
-        
-        # 長所と短所を自己PRとして出力
-        st.subheader("自己PR")
-        st.write(f"長所: {positive_reframe.split('and provide')[0].strip()}")
-        st.write(f"短所: {negative_word}")
+if st.button("リフレーミング開始"):
+  if negative_word:
+      with st.spinner("リフレーミング中..."):
+          positive_reframe = reframing(negative_word)
+          st.subheader("こんな解釈もできますね！")
+          st.write(positive_reframe)
+          
+          # 長所と短所を自己PRとして出力
+          st.subheader("自己PR")
+          st.write(f"長所: {positive_reframe.split('and provide')[0].strip()}")
+          st.write(f"短所: {negative_word}")
